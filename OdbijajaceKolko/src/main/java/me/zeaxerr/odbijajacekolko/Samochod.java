@@ -1,14 +1,13 @@
 package me.zeaxerr.odbijajacekolko;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
-
-public class OdbijajaceKolko extends Application {
+public class Samochod {
+    // Składowe klasy
     private String marka;
     private String model;
     private int rokProdukcji;
     private double przebieg;
 
+    // Konstruktor z wartościami początkowymi
     public Samochod(String marka, String model, int rokProdukcji, double przebieg) {
         this.marka = marka;
         this.model = model;
@@ -16,6 +15,7 @@ public class OdbijajaceKolko extends Application {
         this.przebieg = przebieg;
     }
 
+    // Konstruktor domyślny
     public Samochod() {
         this.marka = "";
         this.model = "";
@@ -23,6 +23,7 @@ public class OdbijajaceKolko extends Application {
         this.przebieg = 0.0;
     }
 
+    // Metoda wyświetlająca informacje o samochodzie
     public void wyswietlInformacje() {
         System.out.println("Marka: " + marka);
         System.out.println("Model: " + model);
@@ -30,6 +31,7 @@ public class OdbijajaceKolko extends Application {
         System.out.println("Przebieg: " + przebieg + " km");
     }
 
+    // Metoda aktualizująca przebieg samochodu
     public void zaktualizujPrzebieg(double nowyPrzebieg) {
         if (nowyPrzebieg >= przebieg) {
             przebieg = nowyPrzebieg;
@@ -38,10 +40,12 @@ public class OdbijajaceKolko extends Application {
         }
     }
 
+    // Metoda sprawdzająca, czy samochód jest starszy niż podany rok
     public boolean czyJestStarszyNiz(int rok) {
         return rokProdukcji < rok;
     }
 
+    // Gettery i settery (opcjonalnie)
     public String getMarka() {
         return marka;
     }
@@ -72,10 +76,5 @@ public class OdbijajaceKolko extends Application {
 
     public void setPrzebieg(double przebieg) {
         this.przebieg = przebieg;
-    }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-
     }
 }

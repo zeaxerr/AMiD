@@ -1,9 +1,16 @@
-package me.zeaxerr.odbijajacekolko;
+package com.example.demo2;
+
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class OdbijajaceKolko extends Application {
+import java.io.IOException;
+
+import static javafx.application.Application.launch;
+
+public class Samochod extends Application{
     private String marka;
     private String model;
     private int rokProdukcji;
@@ -73,7 +80,6 @@ public class OdbijajaceKolko extends Application {
     public void setPrzebieg(double przebieg) {
         this.przebieg = przebieg;
     }
-
     @Override
     public void start(Stage stage) throws Exception {
 
